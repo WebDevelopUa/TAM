@@ -24,6 +24,7 @@ https://download.microsoft.com/download/7/0/3/703455ee-a747-4cc8-bd3e-98a615c3ae
 Model with two roles: ***admin*** and ***patient***
 
 
+
 | Data                            | Role         | Permissions  |
 | ------------- |                 :-------------:|  -----:|
 | patient personal information    | admin       | Create, Read, Update, Delete |
@@ -34,6 +35,8 @@ Model with two roles: ***admin*** and ***patient***
  
 
 
+
+
 | Component      | Relevancies  |
 | -------------  |:------------- | 
 | Tomcat         | exposes a Web browser interface, utilizes HTTP, utilizes a network protocol   | 
@@ -42,15 +45,9 @@ Model with two roles: ***admin*** and ***patient***
  
 
  
-[Project file](Test-Threat-Model-01.atmx "Sample #1 Project file")
-
-[Report file](Threat_Model_1-Comprehensive_Report.mht "Sample #1 Report file")
+[Project file](Test-Threat-Model-01.atmx "Sample #1 Project file") |  [Report file](Threat_Model_1-Comprehensive_Report.mht "Sample #1 Report file")
 
  
-[Project file](https://github.com/WebDevelopUa/TAM/Test-Threat-Model-01.atmx "Sample #1 Project file")
-
-[Report file](https://github.com/WebDevelopUa/TAM/Threat_Model_1-Comprehensive_Report.mht "Sample #1 Report file")
-
 
 ***
 
