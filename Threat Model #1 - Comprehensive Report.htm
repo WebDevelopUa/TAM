@@ -1,0 +1,668 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>Threat Model #1 - Comprehensive Report</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css 
+href="Threat%20Model%20%231%20-%20Comprehensive%20Report_files/styles.css">
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV class=comprehensiveTitle>Threat Model #1</DIV><BR>
+<DIV class=jumplinks><A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#business_objectives">Business 
+Objectives</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#roles">Roles</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#components">Components</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#external_dependencies">External 
+Dependencies</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#data">Data</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#application_use_cases">Application 
+Use Cases</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#confidentiality_threats">Confidentiality 
+Threats</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#integrity_threats">Integrity 
+Threats</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/8f204905-0be9-43b5-b312-bd4086f0385d.htm#availability_threats">Availability 
+Threats</A></DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=2><B>Threat Model Information</B></TD></TR>
+  <TR>
+    <TD width="20%">Name </TD>
+    <TD>Threat Model #1</TD></TR>
+  <TR>
+    <TD width="20%">Description</TD>
+    <TD>Test Threat Model #1 </TD></TR></TBODY></TABLE><BR><A 
+name=business_objectives>
+<DIV class=mainSection>Business Objectives</DIV><BR>
+<DIV class=mainSectionText>The business objectives define the objectives behind 
+the implementation of the system. These objectives are supported by use cases. 
+</DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Business Objectives</TD></TR></TBODY></TABLE><BR><A 
+name=roles>
+<DIV class=mainSection>Roles</DIV><BR>
+<DIV class=mainSectionText>Roles define the privilege levels users have. They 
+are logical groups of users who use the application, and can perform the 
+necessary functions defined by the application. These groups are then divided 
+into two sub groups, User Roles and Service Roles. User Roles contain users who 
+interact with the application. Service Roles contain users under which services 
+are executed. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>User Roles</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Auth. Mechanism</TD>
+    <TD class=subHeader># of Identities</TD></TR>
+  <TR>
+    <TD>administrator</TD>
+    <TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD>patient</TD>
+    <TD>
+    <TD>
+    <TD></TD></TR></TBODY></TABLE><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>Service Roles</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Auth. Mechanism</TD>
+    <TD class=subHeader># of Identities</TD></TR>
+  <TR>
+    <TD vAlign=top>Tomcat Role</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top></TD>
+  <TR>
+    <TD vAlign=top>MySQL Role</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top></TD>
+  <TR>
+    <TD vAlign=top>Servlets Role</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top></TD></TR></TBODY></TABLE><BR><A name=components>
+<DIV class=mainSection>Components</DIV><BR>
+<DIV class=mainSectionText>Components define the high level building blocks of 
+the system. Components are decomposed logically into services and objects 
+through which the user interacts with the system. Both components and objects 
+can talk to each other in order to fulfill a user action. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=5>Components</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Roles</TD>
+    <TD class=subHeader>Type</TD>
+    <TD class=subHeader>Tech. Type</TD>
+    <TD class=subHeader>Run As</TD></TR>
+  <TR>
+    <TD vAlign=top>Tomcat</TD>
+    <TD vAlign=top></TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top><FONT size=1 face=Tahoma>Tomcat Service Account</FONT> 
+  </TD></TR>
+  <TR>
+    <TD vAlign=top>MySQL</TD>
+    <TD vAlign=top></TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top><FONT size=1 face=Tahoma>MySQL Service Account</FONT> 
+</TD></TR>
+  <TR>
+    <TD vAlign=top>Servlets</TD>
+    <TD vAlign=top></TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top><FONT size=1 face=Tahoma>Servlets Service Account</FONT> 
+  </TD></TR></TBODY></TABLE><BR><BR><A name=external_dependencies>
+<DIV class=mainSection>External Dependencies</DIV><BR>
+<DIV class=mainSectionText>External dependency is a type of component which is 
+external to the application and application does not have control over the 
+behavior or the implementation of the dependency. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>External Dependencies</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Dependency Type</TD></TR>
+  <TR>
+    <TD vAlign=top>External Dependency 1</TD>
+    <TD vAlign=top>https://www.microsoft.com/en-us/download/</TD>
+    <TD vAlign=top>Website</TD></TR></TBODY></TABLE><BR><BR><A name=data>
+<DIV class=mainSection>Data</DIV><BR>
+<DIV class=mainSectionText>Data can be logically broken down into data elements 
+grouped based on the classification. Data is actively stored in one or more 
+components which can be accessed by the user. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=5>Data</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Data Elements</TD>
+    <TD class=subHeader>Data Classification</TD>
+    <TD class=subHeader>Data Stores</TD></TR>
+  <TR>
+    <TD vAlign=top>patient personal information</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top></TD>
+  <TR>
+    <TD colSpan=5><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=9>Access Control</TD></TR>
+        <TR>
+          <TD class=subHeader>Role</TD>
+          <TD class=subHeader colSpan=4 align=center>Access Control</TD>
+          <TD class=subHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>administrator</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center><B>U</B></TD>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD vAlign=top></TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>patient</FONT> </TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center><B>U</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top></TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD vAlign=top>message</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top>
+    <TD vAlign=top></TD>
+  <TR>
+    <TD colSpan=5><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=9>Access Control</TD></TR>
+        <TR>
+          <TD class=subHeader>Role</TD>
+          <TD class=subHeader colSpan=4 align=center>Access Control</TD>
+          <TD class=subHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>administrator</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD vAlign=top></TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>patient</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD 
+vAlign=top></TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=application_use_cases>
+<DIV class=mainSection>Application Use Cases</DIV><BR>
+<DIV class=mainSectionText>Use cases are fulfilled by a sequence of calls. Each 
+use case is targeted towards a specific business objective. Each call captures 
+the user's action on a component. Each use case achieves a net data effect on a 
+data. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>Application Use Cases</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Roles</TD>
+    <TD class=subHeader>Net Data Effect</TD></TR>
+  <TR>
+    <TD>administrator Create patient personal information</TD>
+    <TD>
+    <TD>administrator</TD>
+    <TD><B>C</B> patient personal information</TD></TR>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>administrator</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>edits</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Servlets</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>patient</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>sends</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Servlets</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat%20Model%20%231%20-%20Comprehensive%20Report_files/f8c40aa5-df96-4427-b5e7-3e7d85b18543.jpg"></TD></TR>
+  <TR>
+    <TD>administrator, patient Read patient personal information</TD>
+    <TD>
+    <TD>administrator<BR>patient</TD>
+    <TD><B>R</B> patient personal information</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD>
+  <TR>
+    <TD>administrator, patient Update patient personal information</TD>
+    <TD>
+    <TD>administrator<BR>patient</TD>
+    <TD><B>U</B> patient personal information</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD>
+  <TR>
+    <TD>administrator Delete patient personal information</TD>
+    <TD>
+    <TD>administrator</TD>
+    <TD><B>D</B> patient personal information</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD>
+  <TR>
+    <TD>administrator, patient Create message</TD>
+    <TD>
+    <TD>administrator<BR>patient</TD>
+    <TD><B>C</B> message</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD>
+  <TR>
+    <TD>administrator, patient Read message</TD>
+    <TD>
+    <TD>administrator<BR>patient</TD>
+    <TD><B>R</B> message</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD>
+  <TR>
+    <TD>administrator, patient Delete message</TD>
+    <TD>
+    <TD>administrator<BR>patient</TD>
+    <TD><B>D</B> message</TD></TR>
+  <TR>
+    <TD colSpan=4></TD>
+  <TR>
+    <TD colSpan=4 align=center></TD></TR></TBODY></TABLE><BR><BR>
+<DIV class=mainSection>Threats</DIV><BR>
+<DIV class=mainSectionText>A threat is defined as an undesired event, a 
+potential occurrence, often best described as an effect that might damage or 
+compromise an asset or objective. It may or may not be malicious in nature. 
+</DIV><BR><BR><A name=confidentiality_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Confidentiality Threats</TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;edits&gt; using &lt;Servlets&gt; by 
+      &lt;administrator&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;sends&gt; using &lt;Servlets&gt; by 
+      &lt;patient&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=integrity_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Integrity Threats</TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;edits&gt; using &lt;Servlets&gt; by 
+      &lt;administrator&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;sends&gt; using &lt;Servlets&gt; by 
+      &lt;patient&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=availability_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Availability Threats</TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;edits&gt; using &lt;Servlets&gt; by 
+      &lt;administrator&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;sends&gt; using &lt;Servlets&gt; by 
+      &lt;patient&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Performance should be 
+            considered a requirement especially for areas of the application 
+            where availab</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Implement appropriate 
+            exception handling</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Denial of Service : Don't display detailed 
+            error messages to users</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Integer Overflow/Underflow : Use Language 
+            features </TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize SSL or 
+            IPSec w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Man in the Middle Attack : Utilize a 
+            well-known authentication protocol to authenticate the server</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Network Eavesdropping : Utilize SSL or 
+            IPSEC w/ Encryption to establish a secure communication 
+channel</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic 
+SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE></A></BODY></HTML>

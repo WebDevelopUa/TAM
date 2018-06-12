@@ -1,0 +1,54 @@
+BODY {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma,verdana,arial,helvetica; MARGIN-LEFT: 17px; BACKGROUND-COLOR: #f7f7f7
+}
+.reportTitle {
+	FONT-SIZE: 16px; MARGIN-BOTTOM: 14px; FONT-WEIGHT: bold
+}
+.sectionHeader {
+	FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.itemHeader {
+	MARGIN-BOTTOM: 8px; HEIGHT: 22px; BACKGROUND-IMAGE: url(column_header_bg.gif); FONT-WEIGHT: bold; COLOR: #ffffff; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND-COLOR: #354867
+}
+.item_level1 {
+	FONT-SIZE: 11px; MARGIN-TOP: 4px; MARGIN-LEFT: 6px
+}
+.item_level2 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 20px
+}
+.item_level3 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 40px
+}
+.item_level4 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 60px
+}
+TABLE {
+	FONT-SIZE: 11px; BACKGROUND-COLOR: #aaaaaa
+}
+TD {
+	PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BACKGROUND-COLOR: #ffffff
+}
+HR {
+	MARGIN-BOTTOM: 8px; BORDER-TOP: #9d9da1 1px solid; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #6c83a9
+}
+.contentArea {
+	MARGIN-BOTTOM: 8px; BORDER-TOP: #aaaaaa 1px solid; BORDER-RIGHT: #aaaaaa 1px solid; MARGIN-TOP: 8px; BORDER-BOTTOM: #aaaaaa 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; MARGIN-LEFT: 6px; BORDER-LEFT: #aaaaaa 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: #ffffff
+}
+.comprehensiveTitle {
+	FONT-SIZE: 20px; WIDTH: 790px; TEXT-ALIGN: center; MARGIN: auto
+}
+.mainSection {
+	FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.mainSectionText {
+	WIDTH: 790px
+}
+.subHeader {
+	BACKGROUND-COLOR: #eaf0f6
+}
+.jumplinks {
+	WIDTH: 790px
+}
+.tableHeader {
+	BACKGROUND-COLOR: #eaf0f6
+}
