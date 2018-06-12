@@ -1,0 +1,3669 @@
+From: =?windows-1251?B?0e718ODt5e3uIEludGVybmV0IEV4cGxvcmVyIDEx?=
+Subject: Threat Model of BLOG - Comprehensive Report
+Date: Wed, 13 Jun 2018 02:48:48 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D402C1.0DFC01B0"
+X-MimeOLE: Produced By Microsoft MimeOLE
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\javad\AppData\Roaming\Microsoft\TAM\Temp\Reports\9444cb34-6869-4ace-aff0-99b31d092ec7.htm
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D5.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>Threat Model of BLOG - Comprehensive Report</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/styles.css">
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV class=3DcomprehensiveTitle>Threat Model of BLOG</DIV><BR>
+<DIV class=3Djumplinks><A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#business_objectives">Business=20
+Objectives</A> | <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#roles">Roles</A>=20
+| <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#components">Components</A>=20
+| <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#external_dependencies">External=
+=20
+Dependencies</A> | <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#data">Data</A>=20
+| <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#application_use_cases">Applicat=
+ion=20
+Use Cases</A> | <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#confidentiality_threats">Confid=
+entiality=20
+Threats</A> | <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#integrity_threats">Integrity=20
+Threats</A> | <A=20
+href=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports=
+/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#availability_threats">Availabil=
+ity=20
+Threats</A></DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D2><B>Threat Model =
+Information</B></TD></TR>
+  <TR>
+    <TD width=3D"20%">Name </TD>
+    <TD>Threat Model of BLOG</TD></TR>
+  <TR>
+    <TD width=3D"20%">Description</TD>
+    <TD>=D0=9F=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=BF=D1=80=D0=B5=D0=B4=D0=BD=D0=B0=D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=
+=BE =D0=B4=D0=BB=D1=8F =
+=D0=BF=D0=BE=D1=81=D1=82=D1=80=D0=BE=D0=B5=D0=BD=D0=B8=D1=8F =
+=D0=9C=D0=BE=D0=B4=D0=B5=D0=BB=D0=B8 =D1=83=D0=B3=D1=80=D0=BE=D0=B7 =
+=D0=B4=D0=BB=D1=8F =
+=D1=82=D0=B5=D1=81=D1=82=D0=BE=D0=B2=D0=BE=D0=B3=D0=BE=20
+      =D0=B1=D0=BB=D0=BE=D0=B3=D0=B0</TD></TR></TBODY></TABLE><BR><A =
+name=3Dbusiness_objectives>
+<DIV class=3DmainSection>Business Objectives</DIV><BR>
+<DIV class=3DmainSectionText>The business objectives define the =
+objectives behind=20
+the implementation of the system. These objectives are supported by use =
+cases.=20
+</DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader>Business Objectives</TD></TR>
+  <TR>
+    <TD>Threat Model of BLOG</TD></TR></TBODY></TABLE><BR><A =
+name=3Droles>
+<DIV class=3DmainSection>Roles</DIV><BR>
+<DIV class=3DmainSectionText>Roles define the privilege levels users =
+have. They=20
+are logical groups of users who use the application, and can perform the =
+
+necessary functions defined by the application. These groups are then =
+divided=20
+into two sub groups, User Roles and Service Roles. User Roles contain =
+users who=20
+interact with the application. Service Roles contain users under which =
+services=20
+are executed. </DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D4>User Roles</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Description</TD>
+    <TD class=3DsubHeader>Auth. Mechanism</TD>
+    <TD class=3DsubHeader># of Identities</TD></TR>
+  <TR>
+    <TD>ADMIN</TD>
+    =
+<TD>=D0=B0=D0=B4=D0=BC=D0=B8=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D1=82=D0=
+=BE=D1=80 =
+=D0=9F=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=
+=81=D0=BA=D0=B8=D0=B5 =D1=80=D0=BE=D0=BB=D0=B8 (User Roles) =
+=D0=9E=D0=BD=D0=B8 =
+=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D1=8F=D1=8E=D1=82 =
+=D0=BB=D0=B8=D1=86,=20
+      =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D0=BC=D0=BE=D0=B3=D1=83=D1=82 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=D1=81=D1=8F =
+=D1=80=D0=B0=D0=B7=D1=80=D0=B0=D0=B1=D0=B0=D1=82=D1=8B=D0=B2=D0=B0=D1=8E=D1=
+=82=D1=81=D1=8F =D0=9F=D0=9E =D0=B8 =
+=D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D1=8E=D1=82=D1=81=D1=8F =
+=D0=B4=D0=BB=D1=8F=20
+      =
+=D0=B8=D0=B4=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=
+=B8 =D0=BA=D0=BB=D0=B0=D1=81=D1=81=D0=BE=D0=B2 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=
+=B9. =D0=9A=D0=B0=D0=B6=D0=B4=D0=B0=D1=8F =D1=80=D0=BE=D0=BB=D1=8C =
+=D1=81=D0=BE=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D1=82 =D0=B4=D0=B2=D0=B0 =
+=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =
+
+      =D0=BF=D0=BE=D0=BB=D1=8F - =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5 =D0=B8 =
+=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5, =D0=B8 =
+=D0=B4=D0=B2=D0=B0 =
+=D0=BE=D0=BF=D1=86=D0=B8=D0=BE=D0=BD=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =
+- =D0=BC=D0=B5=D1=85=D0=B0=D0=BD=D0=B8=D0=B7=D0=BC =
+=D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=
+=B8=D0=B8 =D0=B8=20
+      =D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D0=BD=D0=BE=D0=B5 =
+=D0=BA=D0=BE=D0=BB=D0=B8=D1=87=D0=B5=D1=81=D1=82=D0=B2=D0=BE =
+=D0=BB=D0=B8=D1=87=D0=BD=D0=BE=D1=81=D1=82=D0=B5=D0=B9, =
+=D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=8E=D1=89=D0=B8=D1=85 =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=83=D1=8E =D1=80=D0=BE=D0=BB=D1=8C. =
+=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =
+=D1=81=D0=BF=D0=B8=D1=81=D0=BA=D0=B0=20
+      =D1=80=D0=BE=D0=BB=D0=B5=D0=B9: =
+=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=
+=8B=D0=B5 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B8,=
+ =
+=D0=BD=D0=B5=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=
+=BD=D0=BD=D1=8B=D0=B5 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B8,=
+=20
+      =
+=D0=B0=D0=B4=D0=BC=D0=B8=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D1=82=D0=BE=D1=
+=80=D1=8B.</TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD>AUTHORIZED_USERS</TD>
+    =
+<TD>=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BD=D1=8B=D0=B5 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B8<=
+/TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD>UNAUTHORIZED_USERS</TD>
+    =
+<TD>=D0=BD=D0=B5=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=
+=B0=D0=BD=D0=BD=D1=8B=D0=B5 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B8<=
+/TD>
+    <TD>
+    <TD></TD></TR></TBODY></TABLE><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D4>Service Roles</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Description</TD>
+    <TD class=3DsubHeader>Auth. Mechanism</TD>
+    <TD class=3DsubHeader># of Identities</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>Service Role 1</TD>
+    <TD =
+vAlign=3Dtop>=D0=A1=D0=BB=D1=83=D0=B6=D0=B5=D0=B1=D0=BD=D1=8B=D0=B5 =
+=D1=80=D0=BE=D0=BB=D0=B8 - =D1=8D=D1=82=D0=BE =
+=D0=BD=D0=B0=D0=B1=D0=BE=D1=80 =
+=D0=BD=D0=B5=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =
+=D1=83=D1=80=D0=BE=D0=B2=D0=BD=D0=B5=D0=B9 =
+=D0=BF=D1=80=D0=B8=D0=B2=D0=B8=D0=BB=D0=B5=D0=B3=D0=B8=D0=B9,=20
+      =
+=D0=B0=D1=81=D1=81=D0=BE=D1=86=D0=B8=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BD=D1=8B=D1=85 =D1=81 =
+=D0=BA=D0=BE=D0=BC=D0=BF=D0=BE=D0=BD=D0=B5=D0=BD=D1=82=D0=B0=D0=BC=D0=B8 =
+=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D1=8F. =
+=D0=A1=D0=BB=D1=83=D0=B6=D0=B0=D1=82, =D0=B2 =
+=D0=BF=D0=B5=D1=80=D0=B2=D1=83=D1=8E =
+=D0=BE=D1=87=D0=B5=D1=80=D0=B5=D0=B4=D1=8C, =D0=B4=D0=BB=D1=8F=20
+      =D0=BE=D0=B1=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =
+=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D1=8F =
+=D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 =
+=D0=BA=D0=BE=D0=BC=D0=BF=D0=BE=D0=BD=D0=B5=D0=BD=D1=82=D0=BE=D0=B2. =
+=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D0=B0=D0=BC=D0=B8 =
+=D1=81=D0=BB=D1=83=D0=B6=D0=B5=D0=B1=D0=BD=D1=8B=D1=85 =
+=D1=80=D0=BE=D0=BB=D0=B5=D0=B9=20
+      =D0=B5=D1=81=D1=82=D1=8C, =D1=81=D0=BA=D0=B0=D0=B6=D0=B5=D0=BC, =
+=D0=B2=D0=B5=D0=B1-=D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=80 =
+=D0=B8=D0=BB=D0=B8 =D0=B1=D0=B0=D0=B7=D0=B0 =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85. =
+=D0=A1=D0=BB=D1=83=D0=B6=D0=B5=D0=B1=D0=BD=D0=B0=D1=8F =
+=D1=80=D0=BE=D0=BB=D1=8C =D1=81=D0=BE=D1=81=D1=82=D0=BE=D0=B8=D1=82 =
+=D0=B8=D0=B7=20
+      =D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D1=85 =
+=D0=BF=D0=BE=D0=BB=D0=B5=D0=B9: - =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5, - =
+=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5, - =
+=D0=BC=D0=B5=D1=85=D0=B0=D0=BD=D0=B8=D0=B7=D0=BC =
+=D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=
+=B8=D0=B8 -=20
+      =D0=BE=D0=B1=D1=80=D0=B0=D0=B7=D1=86=D0=BE=D0=B2=D0=BE=D0=B5 =
+=D1=87=D0=B8=D1=81=D0=BB=D0=BE =
+=D1=81=D1=83=D1=89=D0=BD=D0=BE=D1=81=D1=82=D0=B5=D0=B9. =
+=D0=92=D1=81=D0=B5 =D0=BF=D0=BE=D0=BB=D1=8F, =
+=D0=BA=D1=80=D0=BE=D0=BC=D0=B5 =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F, =
+=D1=8F=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F=20
+      =
+=D0=BE=D0=BF=D1=86=D0=B8=D0=BE=D0=BD=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=BC=D0=
+=B8. =D0=9F=D0=BE=D0=BB=D1=8F =
+=C2=AB=D0=BC=D0=B5=D1=85=D0=B0=D0=BD=D0=B8=D0=B7=D0=BC =
+=D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=
+=B8=D0=B8=C2=BB =D0=B8 =
+=C2=AB=D0=BF=D1=80=D0=B8=D0=B1=D0=BB=D0=B8=D0=B7=D0=B8=D1=82=D0=B5=D0=BB=D1=
+=8C=D0=BD=D0=BE=D0=B5 =D1=87=D0=B8=D1=81=D0=BB=D0=BE=20
+      =D1=81=D1=83=D1=89=D0=BD=D0=BE=D1=81=D1=82=D0=B5=D0=B9=C2=BB =
+=D0=B2=D1=8B=D0=B1=D0=B8=D1=80=D0=B0=D1=8E=D1=82=D1=81=D1=8F =
+=D0=B8=D0=B7 =
+=D0=BD=D0=B8=D1=81=D0=BF=D0=B0=D0=B4=D0=B0=D1=8E=D1=89=D0=B8=D1=85 =
+=D1=81=D0=BF=D0=B8=D1=81=D0=BA=D0=BE=D0=B2, =
+=D1=81=D0=BE=D0=B4=D0=B5=D1=80=D0=B6=D0=B0=D0=BD=D0=B8=D0=B5 =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =
+=D1=82=D0=B0=D0=BA=D0=B6=D0=B5=20
+      =
+=D0=BF=D0=BE=D0=B4=D0=B2=D0=B5=D1=80=D0=B3=D0=B0=D0=B5=D1=82=D1=81=D1=8F =
+=D0=BA=D0=BE=D1=80=D1=80=D0=B5=D0=BA=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=BA=D0=
+=B5 =D0=B2 =D0=BD=D0=B0=D1=81=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B0=D1=85 =
+=D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D1=8B.</TD>
+    <TD vAlign=3Dtop>Forms</TD>
+    <TD vAlign=3Dtop>6-10</TD></TR></TBODY></TABLE><BR><A =
+name=3Dcomponents>
+<DIV class=3DmainSection>Components</DIV><BR>
+<DIV class=3DmainSectionText>Components define the high level building =
+blocks of=20
+the system. Components are decomposed logically into services and =
+objects=20
+through which the user interacts with the system. Both components and =
+objects=20
+can talk to each other in order to fulfill a user action. </DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D5>Components</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Roles</TD>
+    <TD class=3DsubHeader>Type</TD>
+    <TD class=3DsubHeader>Tech. Type</TD>
+    <TD class=3DsubHeader>Run As</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>Component 1 - Profile info</TD>
+    <TD vAlign=3Dtop>ADMIN<BR>AUTHORIZED_USERS </TD>
+    <TD vAlign=3Dtop>Website</TD>
+    <TD vAlign=3Dtop>Other</TD>
+    <TD vAlign=3Dtop></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>Component 2 - Blog post</TD>
+    <TD vAlign=3Dtop>ADMIN<BR>AUTHORIZED_USERS<BR>UNAUTHORIZED_USERS =
+</TD>
+    <TD vAlign=3Dtop>Website</TD>
+    <TD vAlign=3Dtop>Other</TD>
+    <TD vAlign=3Dtop></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3Dexternal_dependencies>
+<DIV class=3DmainSection>External Dependencies</DIV><BR>
+<DIV class=3DmainSectionText>External dependency is a type of component =
+which is=20
+external to the application and application does not have control over =
+the=20
+behavior or the implementation of the dependency. </DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D4>External Dependencies</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Description</TD>
+    <TD class=3DsubHeader>Dependency Type</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>External Dependency</TD>
+    <TD vAlign=3Dtop>https://ru.wordpress.com/create-blog/ =
+=D0=92=D0=BD=D0=B5=D1=88=D0=BD=D0=B8=D0=B5 =
+=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D0=B8 -=20
+      =D1=8D=D1=82=D0=BE =
+=D0=BD=D0=B5=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D0=BA=D0=BE=D0=BC=D0=BF=D0=BE=D0=BD=D0=B5=D0=BD=D1=82=D1=8B, =D1=81 =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=BC=D0=B8 =
+=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=B1=D1=83=D0=B4=D0=B5=D1=82 =
+=D0=B2=D0=B7=D0=B0=D0=B8=D0=BC=D0=BE=D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=
+=BE=D0=B2=D0=B0=D1=82=D1=8C,=20
+      =D0=BD=D0=BE =D0=BD=D0=B0 =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =D0=BE=D0=BD=D0=BE =
+=D0=BD=D0=B5 =D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =
+=D0=BD=D0=B5=D0=BF=D0=BE=D1=81=D1=80=D0=B5=D0=B4=D1=81=D1=82=D0=B2=D0=B5=D0=
+=BD=D0=BD=D0=BE =D0=B2=D0=BB=D0=B8=D1=8F=D1=82=D1=8C. =
+=D0=9D=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80, =D1=8D=D1=82=D0=BE =
+=D0=BC=D0=BE=D0=B6=D0=B5=D1=82=20
+      =D0=B1=D1=8B=D1=82=D1=8C =
+=D0=BF=D0=B0=D1=81=D0=BF=D0=BE=D1=80=D1=82. NET, =
+=D1=86=D0=B8=D1=84=D1=80=D0=BE=D0=B2=D1=8B=D0=B5 =
+=D1=81=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82=D1=8B =
+=D1=81=D0=B0=D0=B9=D1=82=D0=BE=D0=B2 =D0=B8 =D1=82.=D0=BF. =
+=D0=92=D0=BD=D0=B5=D1=88=D0=BD=D1=8F=D1=8F =
+=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=20
+      =D1=81=D0=BE=D1=81=D1=82=D0=BE=D0=B8=D1=82 =
+=D0=B2=D1=81=D0=B5=D0=B3=D0=BE =D0=B8=D0=B7 3 =
+=D0=BF=D0=BE=D0=BB=D0=B5=D0=B9: - =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5, - =
+=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5 - =D1=82=D0=B8=D0=BF =
+(=D0=B2=D1=8B=D0=B1=D0=B8=D1=80=D0=B0=D0=B5=D0=BC=D1=8B=D0=B9 =
+=D0=B8=D0=B7=20
+      =D1=81=D0=BF=D0=B8=D1=81=D0=BA=D0=B0).</TD>
+    <TD vAlign=3Dtop>Website</TD></TR></TBODY></TABLE><BR><BR><A =
+name=3Ddata>
+<DIV class=3DmainSection>Data</DIV><BR>
+<DIV class=3DmainSectionText>Data can be logically broken down into data =
+elements=20
+grouped based on the classification. Data is actively stored in one or =
+more=20
+components which can be accessed by the user. </DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D5>Data</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Description</TD>
+    <TD class=3DsubHeader>Data Elements</TD>
+    <TD class=3DsubHeader>Data Classification</TD>
+    <TD class=3DsubHeader>Data Stores</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>Profile Info</TD>
+    <TD vAlign=3Dtop>=D0=92 =D0=BF=D1=83=D0=BD=D0=BA=D1=82=D0=B5 =
+=C2=AB=D0=94=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5=C2=BB =
+=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D1=8F=D1=8E=D1=82=D1=81=D1=8F =
+=D1=82=D0=B8=D0=BF=D1=8B =
+=D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D0=B8,=20
+      =
+=D0=BE=D0=B1=D1=80=D0=B0=D0=B1=D0=B0=D1=82=D1=8B=D0=B2=D0=B0=D0=B5=D0=BC=D0=
+=BE=D0=B9 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=BC =
+=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =
+=D0=B8=D0=BB=D0=B8 =D1=8F=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =
+=D1=87=D0=B0=D1=81=D1=82=D1=8C=D1=8E =D0=B5=D0=B3=D0=BE =
+=D0=B2=D0=BD=D1=83=D1=82=D1=80=D0=B5=D0=BD=D0=BD=D0=B8=D1=85=20
+      =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D1=81=D1=81=D0=BE=D0=B2. =
+=D0=9E=D1=82=D0=B4=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5 =
+=D1=82=D0=B8=D0=BF=D1=8B =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =
+=D0=BC=D0=BE=D0=B3=D1=83=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =
+=D1=80=D0=B0=D0=B7=D0=B1=D0=B8=D1=82=D1=8B =D0=BD=D0=B0 =
+=D0=BA=D0=BE=D0=BD=D0=BA=D1=80=D0=B5=D1=82=D0=BD=D1=8B=D0=B5 =
+=D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D1=8B=20
+      - =D0=B4=D0=BB=D1=8F =D0=B8=D1=85 =D0=B1=D0=BE=D0=BB=D0=B5=D0=B5 =
+=D0=BD=D0=B0=D0=B3=D0=BB=D1=8F=D0=B4=D0=BD=D0=BE=D0=B3=D0=BE =
+=D0=BF=D1=80=D0=B5=D0=B4=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D1=
+=8F. =D0=A2=D0=B0=D0=BA, =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=
+=81=D0=BA=D0=B0=D1=8F =D1=83=D1=87=D0=B5=D1=82=D0=BD=D0=B0=D1=8F=20
+      =D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D1=8C =
+=D0=B1=D0=B0=D0=BD=D0=BA=D0=BE=D0=B2=D1=81=D0=BA=D0=BE=D0=B9 =
+=D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D1=8B =
+=D0=BF=D1=80=D0=B5=D0=B4=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D1=8E=D1=82 =
+=D1=81=D0=BE=D0=B1=D0=BE=D0=B9 =
+=D0=BE=D1=82=D0=B4=D0=B5=D0=BB=D1=8C=D0=BD=D1=83=D1=8E =
+=D1=81=D1=83=D1=89=D0=BD=D0=BE=D1=81=D1=82=D1=8C, =D0=BD=D0=BE =
+=D0=BC=D0=BE=D0=B6=D0=B5=D1=82=20
+      =D0=B1=D1=8B=D1=82=D1=8C =
+=D1=80=D0=B0=D0=B7=D0=B1=D0=B8=D1=82=D0=B0 =D0=BD=D0=B0 =
+=D0=BF=D0=BE=D0=BB=D1=8F =D0=BB=D0=BE=D0=B3=D0=B8=D0=BD, =
+=D0=BF=D0=B0=D1=80=D0=BE=D0=BB=D1=8C, =D0=A4=D0=98=D0=9E =D0=B8 =
+=D1=82=D0=B0=D0=BA =D0=B4=D0=B0=D0=BB=D0=B5=D0=B5. =
+=D0=9A=D0=B0=D0=B6=D0=B4=D1=8B=D0=B9 =
+=D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=20
+      =D0=BE=D1=82=D0=BD=D0=BE=D1=81=D0=B8=D1=82=D1=81=D1=8F =D0=BA =
+=D1=82=D0=B8=D0=BF=D1=83 =D0=94=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 (Data), =
+=D1=81=D0=BE=D1=81=D1=82=D0=BE=D0=B8=D1=82 =D0=B8=D0=B7 =
+=D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D1=85 =
+=D0=BF=D0=BE=D0=BB=D0=B5=D0=B9: =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5,=20
+      =D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5, =
+=D1=81=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =
+=D0=BF=D0=BE=D0=B4=D0=BF=D0=BE=D0=BB=D0=B5=D0=B9, =
+=D0=BA=D0=BB=D0=B0=D1=81=D1=81 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =
+(=D0=BD=D0=B5=D0=B2=D0=B0=D0=B6=D0=BD=D0=BE, =
+=D0=B2=D0=B0=D0=B6=D0=BD=D0=BE, =D0=BE=D1=87=D0=B5=D0=BD=D1=8C =
+=D0=B2=D0=B0=D0=B6=D0=BD=D0=BE =D0=B8=20
+      =D1=82.=D0=B4.), =D0=BC=D0=B0=D1=82=D1=80=D0=B8=D1=86=D0=B0 =
+=D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D1=8F =
+=D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF=D0=B0. =
+=D0=9F=D0=BE=D1=81=D0=BB=D0=B5=D0=B4=D0=BD=D1=8F=D1=8F =
+=D1=81=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =
+=D0=BD=D0=B0 =D0=BE=D1=81=D0=BD=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B8=20
+      =D0=B2=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =
+=D1=80=D0=B0=D0=BD=D0=B5=D0=B5 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=
+=81=D0=BA=D0=B8=D1=85 =D1=80=D0=BE=D0=BB=D0=B5=D0=B9 =D0=B8 =
+=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D1=8F=D0=B5=D1=82 =
+=D0=BF=D1=80=D0=B0=D0=B2=D0=B0 =
+=D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF=D0=B0 =
+=D0=BA=D0=B0=D0=B6=D0=B4=D0=BE=D0=B9=20
+      =D1=80=D0=BE=D0=BB=D0=B8 =D0=BA =
+=D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D1=83 =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85. =D0=94=D0=BB=D1=8F =
+=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =
+=D0=BF=D1=80=D0=B0=D0=B2 =D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF=D0=B0 =
+=D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D1=8E=D1=82=D1=81=D1=8F =
+=D1=87=D0=B5=D1=82=D1=8B=D1=80=D0=B5=20
+      =D0=BE=D1=82=D0=B4=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =
+=D0=BF=D1=80=D0=B0=D0=B2=D0=B0 (=D0=BD=D0=B0 =
+=D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D0=B5, =
+=D1=87=D1=82=D0=B5=D0=BD=D0=B8=D0=B5, =
+=D0=BC=D0=BE=D0=B4=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8E =
+=D0=B8 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D0=B8),=20
+      =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D0=BC=D0=BE=D0=B3=D1=83=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =
+=D1=80=D0=B0=D0=B7=D1=80=D0=B5=D1=88=D0=B5=D0=BD=D1=8B =
+=D0=B8=D0=BB=D0=B8 =
+=D0=B7=D0=B0=D0=BF=D1=80=D0=B5=D1=89=D0=B5=D0=BD=D1=8B =
+=D0=B4=D0=BB=D1=8F =D0=BA=D0=B0=D0=B6=D0=B4=D0=BE=D0=B9 =
+=D1=80=D0=BE=D0=BB=D0=B8 =D0=B2 =
+=D0=BE=D1=82=D0=B4=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE=D1=81=D1=82=D0=B8.=20
+      =D0=9A=D1=80=D0=BE=D0=BC=D0=B5 =D1=82=D0=BE=D0=B3=D0=BE, =
+=D0=B2=D0=BE=D0=B7=D0=BC=D0=BE=D0=B6=D0=BD=D0=BE =
+=D0=B7=D0=B0=D0=B4=D0=B0=D0=BD=D0=B8=D0=B5 =
+=D1=83=D1=81=D0=BB=D0=BE=D0=B2=D0=BD=D1=8B=D1=85 =
+=D0=BF=D1=80=D0=B0=D0=B2 - =D1=82=D0=B0=D0=BA=D0=B8=D1=85, =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=82=20
+      =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=BF=D1=80=D0=B8 =
+=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B8 =
+=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D0=BE=D0=B3=D0=
+=BE =D1=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D1=8F. =
+=D0=9D=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80, =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C =
+=D0=B8=D0=BC=D0=B5=D0=B5=D1=82=20
+      =D0=BF=D1=80=D0=B0=D0=B2=D0=BE =
+=D1=87=D0=B8=D1=82=D0=B0=D1=82=D1=8C =D0=B8=D0=BB=D0=B8 =
+=D0=BC=D0=BE=D0=B4=D0=B8=D1=84=D0=B8=D1=86=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=
+=82=D1=8C =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 =
+=D1=83=D1=87=D0=B5=D1=82=D0=BD=D0=BE=D0=B9 =
+=D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D0=B8, =D0=BD=D0=BE =
+=D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=BF=D1=80=D0=B8=20
+      =D1=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D0=B8, =D1=87=D1=82=D0=BE =
+=D0=BE=D0=BD =D1=8F=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =
+=D0=B2=D0=BB=D0=B0=D0=B4=D0=B5=D0=BB=D1=8C=D1=86=D0=B5=D0=BC =
+=D1=8D=D1=82=D0=BE=D0=B9 =D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D0=B8. =
+=D0=90=D0=B4=D0=BC=D0=B8=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D1=82=D0=BE=D1=
+=80 =D0=B6=D0=B5 =D0=B8=D0=BC=D0=B5=D0=B5=D1=82=20
+      =D0=BF=D0=BE=D0=BB=D0=BD=D1=8B=D0=B5 =
+=D0=BF=D1=80=D0=B0=D0=B2=D0=B0 =D0=B4=D0=BB=D1=8F =
+=D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9 =D0=BD=D0=B0=D0=B4 =
+=D1=83=D1=87=D0=B5=D1=82=D0=BD=D1=8B=D0=BC=D0=B8 =
+=D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D1=8F=D0=BC=D0=B8 - =D0=B1=D0=B5=D0=B7 =
+=D0=B2=D1=81=D1=8F=D0=BA=D0=B8=D1=85 =
+=D1=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D0=B9.</TD>
+    <TD vAlign=3Dtop>Login Password First Name Last Name</TD>
+    <TD vAlign=3Dtop>High Business Impact</TD>
+    <TD vAlign=3Dtop>Component 1 - Profile info<BR></TD></TR>
+  <TR>
+    <TD colSpan=3D5><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D9>Access Control</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Role</TD>
+          <TD class=3DsubHeader colSpan=3D4 align=3Dcenter>Access =
+Control</TD>
+          <TD class=3DsubHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 face=3DTahoma>ADMIN</FONT> =
+</TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>C</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>R</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>D</B></TD>
+          <TD vAlign=3Dtop></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>R</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>U</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop><FONT size=3D1 face=3DTahoma>User is the =
+owner of=20
+            Data</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>UNAUTHORIZED_USERS</FONT>=20
+</TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop></TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop>Blog Post</TD>
+    <TD vAlign=3Dtop>
+    <TD =
+vAlign=3Dtop>=D0=A1=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8F</TD>
+    <TD vAlign=3Dtop>Medium Business Impact</TD>
+    <TD vAlign=3Dtop>Component 2 - Blog post<BR></TD></TR>
+  <TR>
+    <TD colSpan=3D5><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D9>Access Control</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Role</TD>
+          <TD class=3DsubHeader colSpan=3D4 align=3Dcenter>Access =
+Control</TD>
+          <TD class=3DsubHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 face=3DTahoma>ADMIN</FONT> =
+</TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>C</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>R</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>U</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>D</B></TD>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>=D0=B2=D1=81=D0=B5 =
+=D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8F</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>U</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>D</B></TD>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>=D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =
+=D1=81=D0=B2=D0=BE=D0=B8 =
+=D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8F / User=20
+            is the owner of Data</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>C</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>R</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop></TD></TR>
+        <TR>
+          <TD vAlign=3Dtop><FONT size=3D1 =
+face=3DTahoma>UNAUTHORIZED_USERS</FONT>=20
+</TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter><B>R</B></TD>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD vAlign=3Dtop width=3D20 align=3Dcenter>
+          <TD=20
+vAlign=3Dtop></TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR>=
+<BR><A=20
+name=3Dapplication_use_cases>
+<DIV class=3DmainSection>Application Use Cases</DIV><BR>
+<DIV class=3DmainSectionText>Use cases are fulfilled by a sequence of =
+calls. Each=20
+use case is targeted towards a specific business objective. Each call =
+captures=20
+the user's action on a component. Each use case achieves a net data =
+effect on a=20
+data. </DIV><BR><BR>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader colSpan=3D4>Application Use Cases</TD></TR>
+  <TR>
+    <TD class=3DsubHeader>Name</TD>
+    <TD class=3DsubHeader>Description</TD>
+    <TD class=3DsubHeader>Roles</TD>
+    <TD class=3DsubHeader>Net Data Effect</TD></TR>
+  <TR>
+    <TD>ADMIN create read delete Profile info</TD>
+    <TD>ADMIN =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=B5=D1=82, =
+=D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=B0=D1=82=D1=80=D0=B8=D0=B2=D0=B0=D0=B5=D1=
+=82, =D1=83=D0=B4=D0=B0=D0=BB=D1=8F=D0=B5=D1=82 =
+=D0=9F=D1=80=D0=BE=D1=84=D0=B8=D0=BB=D1=8C =
+=D0=9F=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82=D1=8B (Use Case) =
+-=20
+      =D1=8D=D1=82=D0=BE =
+=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5 =
+=D0=BA=D0=BE=D0=BD=D0=BA=D1=80=D0=B5=D1=82=D0=BD=D1=8B=D1=85 =
+=D1=81=D1=86=D0=B5=D0=BD=D0=B0=D1=80=D0=B8=D0=B5=D0=B2, =
+=D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=B2=D0=B0=D0=B5=D0=BC=D1=8B=D1=85 =
+=D0=B4=D0=BB=D1=8F =
+=D1=80=D0=B5=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =
+=D0=B7=D0=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=B2=20
+      =D0=BF=D1=80=D0=B5=D0=B4=D1=8B=D0=B4=D1=83=D1=89=D0=B5=D0=BC =
+=D0=BF=D1=83=D0=BD=D0=BA=D1=82=D0=B5 =
+=D1=80=D0=B0=D0=B7=D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D0=B9. =
+=D0=A2=D0=B0=D0=BA, =
+=D0=BA=D0=BE=D0=BF=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5, =
+=D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=20
+      =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=
+=81=D0=BA=D0=BE=D0=B9 =D1=83=D1=87=D0=B5=D1=82=D0=BD=D0=BE=D0=B9 =
+=D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D0=B8 =D0=B8=D0=BB=D0=B8 =
+=D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D1=8F =
+=D0=BD=D0=BE=D0=B2=D0=BE=D0=B9 =
+=D1=83=D1=87=D0=B5=D1=82=D0=BD=D0=BE=D0=B9 =
+=D0=B7=D0=B0=D0=BF=D0=B8=D1=81=D0=B8 =
+=D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=82=D1=81=D1=8F=20
+      =D1=85=D0=BE=D1=80=D0=BE=D1=88=D0=B8=D0=BC=D0=B8 =
+=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D0=B0=D0=BC=D0=B8 =
+=D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82=D0=BE=D0=B2. =
+=D0=9A=D0=B0=D0=B6=D0=B4=D1=8B=D0=B9 =
+=D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82 =
+=D1=81=D0=BE=D1=81=D1=82=D0=BE=D0=B8=D1=82 =D0=B8=D0=B7 =
+=D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D1=85=20
+      =D0=BF=D0=BE=D0=BB=D0=B5=D0=B9: - =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5, =
+-&nbsp;=D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5 =
+(=D0=BE=D0=BF=D1=86=D0=B8=D0=BE=D0=BD=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE), =
+-&nbsp;=D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=81-=D0=B7=D0=B0=D0=B4=D0=B0=D1=87=
+=D0=B8,=20
+      =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D1=80=D0=B5=D0=B0=D0=BB=D0=B8=D0=B7=D1=83=D1=8E=D1=82=D1=81=D1=8F =
+=D0=B2 =D1=80=D0=B0=D0=BC=D0=BA=D0=B0=D1=85 =
+=D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82=D0=B0, - =
+=D1=80=D0=BE=D0=BB=D0=B8, =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =
+=D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=82 =D0=B2=20
+      =D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82=D0=B5, - =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5, =
+=D0=B2=D0=B7=D0=B0=D0=B8=D0=BC=D0=BE=D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=
+=B8=D0=B5 =D1=81 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=BC=D0=B8 =
+=D0=BE=D0=BF=D0=B8=D1=81=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =
+=D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82 =D0=B8 -=20
+      =D0=B8=D1=82=D0=BE=D0=B3 =
+=D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8. =
+=D0=98=D1=82=D0=BE=D0=B3 =
+=D0=BF=D1=80=D0=B5=D0=B4=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=
+=81=D1=8F =D0=B2 =D0=B2=D0=B8=D0=B4=D0=B5 =
+=D0=BA=D0=BE=D0=BC=D0=B1=D0=B8=D0=BD=D0=B0=D1=86=D0=B8=D0=B8 =
+=D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9 =
+=D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D1=8F,=20
+      =D1=87=D1=82=D0=B5=D0=BD=D0=B8=D1=8F, =
+=D0=BC=D0=BE=D0=B4=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=B8 =
+=D0=B8 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85. =
+=D0=A4=D0=B0=D0=BA=D1=82=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B8, =
+=D0=BF=D1=80=D0=B5=D1=86=D0=B5=D0=B4=D0=B5=D0=BD=D1=82 =
+=D0=BE=D0=BF=D0=B8=D1=81=D1=8B=D0=B2=D0=B0=D0=B5=D1=82=20
+      =D0=BA=D0=B0=D0=BA=D0=BE=D0=B5-=D1=82=D0=BE =
+=D1=81=D0=BE=D0=B1=D1=8B=D1=82=D0=B8=D0=B5, =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D0=BE=D0=B5 =
+=D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =
+=D0=BF=D1=80=D0=BE=D0=B8=D0=B7=D0=BE=D0=B9=D1=82=D0=B8 =
+=D0=BF=D1=80=D0=B8 =D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=B5 =
+=D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D1=8B.</TD>
+    <TD>ADMIN</TD>
+    <TD><B>C</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=3D4><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D4>Calls</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Caller</TD>
+          <TD class=3DsubHeader>Action</TD>
+          <TD class=3DsubHeader>Component</TD>
+          <TD class=3DsubHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>create</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 1 - Profile=20
+info</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>read</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 1 - Profile=20
+info</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>delete</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 1 - Profile =
+info</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT>=20
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=3D4 align=3Dcenter><IMG=20
+      =
+src=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/=
+3b30dcb5-bd8f-480f-8f22-5fbaa95c56ab.jpg"></TD></TR>
+  <TR>
+    <TD>ADMIN create read update delete Blog post</TD>
+    <TD>ADMIN =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=B5=D1=82, =
+=D1=87=D0=B8=D1=82=D0=B0=D0=B5=D1=82, =
+=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D1=8F=D0=B5=D1=82, =
+=D1=83=D0=B4=D0=B0=D0=BB=D1=8F=D0=B5=D1=82 =D0=92=D0=A1=D0=95 =
+=D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8F</TD>
+    <TD>ADMIN</TD>
+    <TD><B>C</B> <B>R</B> <B>U</B> <B>D</B> Blog Post</TD></TR>
+  <TR>
+    <TD colSpan=3D4><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D4>Calls</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Caller</TD>
+          <TD class=3DsubHeader>Action</TD>
+          <TD class=3DsubHeader>Component</TD>
+          <TD class=3DsubHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>create</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>read</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>update</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>ADMIN</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>delete</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT>=20
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=3D4 align=3Dcenter><IMG=20
+      =
+src=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/=
+82ce606f-4ce6-4bfb-aaa1-1ad1b4e42620.jpg"></TD></TR>
+  <TR>
+    <TD>AUTHORIZED read update Profile info</TD>
+    =
+<TD>=D0=90=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BD=D1=8B=D0=B9 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C =
+=D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=B0=D1=82=D1=80=D0=B8=D0=B2=D0=B0=D0=B5=D1=
+=82 =D0=B8 =
+=D1=80=D0=B5=D0=B4=D0=B0=D0=BA=D1=82=D0=B8=D1=80=D1=83=D0=B5=D1=82 =
+=D0=9F=D1=80=D0=BE=D1=84=D0=B8=D0=BB=D1=8C</TD>
+    <TD>ADMIN</TD>
+    <TD><B>R</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=3D4><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D4>Calls</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Caller</TD>
+          <TD class=3DsubHeader>Action</TD>
+          <TD class=3DsubHeader>Component</TD>
+          <TD class=3DsubHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>read</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 1 - Profile=20
+info</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>AUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>update</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 1 - Profile =
+info</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT>=20
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=3D4 align=3Dcenter><IMG=20
+      =
+src=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/=
+40c89be3-8e86-416e-ad95-e07080f17fdf.jpg"></TD></TR>
+  <TR>
+    <TD>AUTHORIZED create read update delete Blog post</TD>
+    =
+<TD>=D0=90=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BD=D1=8B=D0=B9 =
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C =
+=D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=B5=D1=82, =
+=D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=B0=D1=82=D1=80=D0=B8=D0=B2=D0=B0=D0=B5=D1=
+=82, =D1=80=D0=B5=D0=B4=D0=B0=D0=BA=D1=82=D0=B8=D1=80=D1=83=D0=B5=D1=82 =
+=D0=B8=20
+      =D1=83=D0=B4=D0=B0=D0=BB=D1=8F=D0=B5=D1=82 =
+=D0=A1=D0=92=D0=9E=D0=81 =
+=D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5</TD>
+    <TD>ADMIN</TD>
+    <TD><B>U</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=3D4><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D4>Calls</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Caller</TD>
+          <TD class=3DsubHeader>Action</TD>
+          <TD class=3DsubHeader>Component</TD>
+          <TD class=3DsubHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>create</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>read</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 =
+face=3DTahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>update</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT><BR></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT> =
+</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 face=3DTahoma>AUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>delete</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT>=20
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=3D4 align=3Dcenter><IMG=20
+      =
+src=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/=
+d4141627-2e74-49c8-9b85-1ba49dc87936.jpg"></TD></TR>
+  <TR>
+    <TD>UNAUTHORIZED read Blog post</TD>
+    =
+<TD>=D0=9D=D0=B5=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=
+=B0=D0=BD=D0=BD=D1=8B=D0=B9 =
+=D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=B0=D1=82=D1=80=D0=B8=D0=B2=D0=B0=D0=B5=D1=
+=82 =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5</TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD colSpan=3D4><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader colSpan=3D4>Calls</TD></TR>
+        <TR>
+          <TD class=3DsubHeader>Caller</TD>
+          <TD class=3DsubHeader>Action</TD>
+          <TD class=3DsubHeader>Component</TD>
+          <TD class=3DsubHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=3D1 =
+face=3DTahoma>UNAUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>read</FONT> </TD>
+          <TD><FONT size=3D1 face=3DTahoma>Component 2 - Blog =
+post</FONT></TD>
+          <TD><FONT size=3D1 face=3DTahoma>Delegate Caller</FONT>=20
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=3D4 align=3Dcenter><IMG=20
+      =
+src=3D"file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/=
+4412b66d-268d-49e2-8149-e41969141ba6.jpg"></TD></TR></TBODY></TABLE><BR><=
+BR>
+<DIV class=3DmainSection>Threats</DIV><BR>
+<DIV class=3DmainSectionText>A threat is defined as an undesired event, =
+a=20
+potential occurrence, often best described as an effect that might =
+damage or=20
+compromise an asset or objective. It may or may not be malicious in =
+nature.=20
+</DIV><BR><BR><A name=3Dconfidentiality_threats>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader>Confidentiality Threats</TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component =
+1 -=20
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 1 =
+-=20
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component =
+1 -=20
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 1 =
+-=20
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component =
+1 -=20
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component =
+2 -=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic =
+SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A=20
+name=3Dintegrity_threats>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader>Integrity Threats</TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 1 - =
+Profile=20
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 1 - =
+Profile=20
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 1 - =
+Profile=20
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 1 - =
+Profile=20
+      info&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 1 - =
+Profile=20
+      info&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic =
+SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A=20
+name=3Davailability_threats>
+<TABLE cellSpacing=3D1 cellPadding=3D0 width=3D790>
+  <TBODY>
+  <TR>
+    <TD class=3DitemHeader>Availability Threats</TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 1 =
+-=20
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 1 - =
+
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 1 =
+-=20
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 1 - =
+
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 1 =
+-=20
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session =
+IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 2 =
+-=20
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - =
+Blog=20
+      post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=3D1 cellPadding=3D0 width=3D"80%" =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD class=3DitemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Cross-Site Scripting (XSS) : =
+Perform=20
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Forceful Browsing : Every object =
+needs to=20
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>HTTP Replay Attack : Provide a =
+secure=20
+            end-to-end communication channel between server and client =
+(e.g.,=20
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>One-Click Attack : Make the request =
+that=20
+            encapsulates the users action unique for each authenticated=20
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Password Brute Force : Implement a =
+lockout=20
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Repudiation Attack : Implement =
+proper and=20
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Response Splitting : Perform=20
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>Session Hijacking : Use strong =
+random=20
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use parameterized =
+SQL=20
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=3Dcheckbox>SQL Injection : Use stored =
+procedure with=20
+            no dynamic=20
+SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE></A></BODY></H=
+TML>
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/3b30dcb5-bd8f-480f-8f22-5fbaa95c56ab.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAV4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEZlRGd2CqoySTgAV
+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
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/82ce606f-4ce6-4bfb-aaa1-1ad1b4e42620.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAV4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEZlRGd2CqoySTgAV
+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
+AooooAKKKKACiiigAooooA//2Q==
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/40c89be3-8e86-416e-ad95-e07080f17fdf.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAV4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEZlRGd2CqoySTgAV
+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
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/d4141627-2e74-49c8-9b85-1ba49dc87936.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAV4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEZlRGd2CqoySTgAV
+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
+HpLzTLO7ufJlvJriaON9gbMaKCQXckEDH3QSTztDbZ8U6SbyS0jmmklRSwZLaVo3ITeVSQLsZtvO
+1ST144qzoeqJreh2WppDJCt1CsnlyKylcjp8wB/HHPUcGhf1+n5B0/r+upLPJqK38CW9rayWbA+d
+LJcskiem1AhDfiy1w/inUI7TxdqVvLr+j6XHc6TAjR6hGGecb5wRHmRcHn+6/Ucdj6HRSaurFJ2v
+/XW55hYapLZ29x5t7JoFncaiBc3chj3WuLSEqhaVSoJPGWXtjgkUs/ijUmjha48QNYXAEH2S2WGI
+HUUaUq0mHQsQUAOEK7ckngivTqzbvQbG+1CO9uftbyRlSI/tkwhJU5BMQbyyQeeVPQelU3d/d+Vi
+FGy+/wDM0qKKKRQUUUUAFFFFABRRRQAVm6na6vNJHJpWp29qVBV47q08+NvfCujBh/vYwTx0I0qK
+AKOj6YmkaVDZI+/ZuZn2hQzMxZiFHCjJOB2HFXqKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKAMLxZYahqOkwQ6Z5YukvbaVWlXcqBJVYsV3LuAAJwCCe1Z4
+8JajDNLfW2sW6aldh1vJXsi0bq2PuJ5gKEBRglm75B7dbRRb+vw/QHq7nI2Pgg6frkV5Bewx2sS7
+dsVr5c8yiLy1SaVWCyqvUbkyCBz1zvaHYT6Vodnp9xcR3EltEIhLHEYwyrwvylm5xjPPJ546VoUU
+7sLBRRRSAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/4412b66d-268d-49e2-8149-e41969141ba6.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAV4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEZlRGd2CqoySTgAV
+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
+KKKKACiiigAooooAKKKKAP/Z
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0
+Content-Type: text/css;
+	charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/styles.css
+
+BODY {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma,verdana,arial,helvetica; =
+MARGIN-LEFT: 17px; BACKGROUND-COLOR: #f7f7f7
+}
+.reportTitle {
+	FONT-SIZE: 16px; MARGIN-BOTTOM: 14px; FONT-WEIGHT: bold
+}
+.sectionHeader {
+	FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.itemHeader {
+	MARGIN-BOTTOM: 8px; HEIGHT: 22px; BACKGROUND-IMAGE: =
+url(column_header_bg.gif); FONT-WEIGHT: bold; COLOR: #ffffff; =
+PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: =
+6px; BACKGROUND-COLOR: #354867
+}
+.item_level1 {
+	FONT-SIZE: 11px; MARGIN-TOP: 4px; MARGIN-LEFT: 6px
+}
+.item_level2 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 20px
+}
+.item_level3 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 40px
+}
+.item_level4 {
+	MARGIN-TOP: 4px; MARGIN-LEFT: 60px
+}
+TABLE {
+	FONT-SIZE: 11px; BACKGROUND-COLOR: #aaaaaa
+}
+TD {
+	PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; =
+PADDING-RIGHT: 3px; BACKGROUND-COLOR: #ffffff
+}
+HR {
+	MARGIN-BOTTOM: 8px; BORDER-TOP: #9d9da1 1px solid; BORDER-BOTTOM: =
+#ffffff 1px solid; BACKGROUND-COLOR: #6c83a9
+}
+.contentArea {
+	MARGIN-BOTTOM: 8px; BORDER-TOP: #aaaaaa 1px solid; BORDER-RIGHT: =
+#aaaaaa 1px solid; MARGIN-TOP: 8px; BORDER-BOTTOM: #aaaaaa 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; MARGIN-LEFT: =
+6px; BORDER-LEFT: #aaaaaa 1px solid; PADDING-RIGHT: 4px; =
+BACKGROUND-COLOR: #ffffff
+}
+.comprehensiveTitle {
+	FONT-SIZE: 20px; WIDTH: 790px; TEXT-ALIGN: center; MARGIN: auto
+}
+.mainSection {
+	FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.mainSectionText {
+	WIDTH: 790px
+}
+.subHeader {
+	BACKGROUND-COLOR: #eaf0f6
+}
+.jumplinks {
+	WIDTH: 790px
+}
+.tableHeader {
+	BACKGROUND-COLOR: #eaf0f6
+}
+
+------=_NextPart_000_0000_01D402C1.0DFC01B0--

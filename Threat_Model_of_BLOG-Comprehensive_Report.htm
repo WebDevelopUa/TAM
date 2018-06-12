@@ -1,0 +1,2040 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>Threat Model of BLOG - Comprehensive Report</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css 
+href="Threat_Model_of_BLOG-Comprehensive_Report_files/styles.css">
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV class=comprehensiveTitle>Threat Model of BLOG</DIV><BR>
+<DIV class=jumplinks><A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#business_objectives">Business 
+Objectives</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#roles">Roles</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#components">Components</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#external_dependencies">External 
+Dependencies</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#data">Data</A> 
+| <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#application_use_cases">Application 
+Use Cases</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#confidentiality_threats">Confidentiality 
+Threats</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#integrity_threats">Integrity 
+Threats</A> | <A 
+href="file:///C:/Users/javad/AppData/Roaming/Microsoft/TAM/Temp/Reports/9444cb34-6869-4ace-aff0-99b31d092ec7.htm#availability_threats">Availability 
+Threats</A></DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=2><B>Threat Model Information</B></TD></TR>
+  <TR>
+    <TD width="20%">Name </TD>
+    <TD>Threat Model of BLOG</TD></TR>
+  <TR>
+    <TD width="20%">Description</TD>
+    <TD>Приложение предназначено для построения Модели угроз для тестового 
+      блога</TD></TR></TBODY></TABLE><BR><A name=business_objectives>
+<DIV class=mainSection>Business Objectives</DIV><BR>
+<DIV class=mainSectionText>The business objectives define the objectives behind 
+the implementation of the system. These objectives are supported by use cases. 
+</DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Business Objectives</TD></TR>
+  <TR>
+    <TD>Threat Model of BLOG</TD></TR></TBODY></TABLE><BR><A name=roles>
+<DIV class=mainSection>Roles</DIV><BR>
+<DIV class=mainSectionText>Roles define the privilege levels users have. They 
+are logical groups of users who use the application, and can perform the 
+necessary functions defined by the application. These groups are then divided 
+into two sub groups, User Roles and Service Roles. User Roles contain users who 
+interact with the application. Service Roles contain users under which services 
+are executed. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>User Roles</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Auth. Mechanism</TD>
+    <TD class=subHeader># of Identities</TD></TR>
+  <TR>
+    <TD>ADMIN</TD>
+    <TD>администратор Пользовательские роли (User Roles) Они определяют лиц, 
+      которые могут пользоваться разрабатываются ПО и используются для 
+      идентификации классов пользователей. Каждая роль содержит два обязательных 
+      поля - название и описание, и два опциональных - механизм аутентификации и 
+      примерное количество личностей, исполняющих данную роль. Пример списка 
+      ролей: авторизованные пользователи, неавторизованные пользователи, 
+      администраторы.</TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD>AUTHORIZED_USERS</TD>
+    <TD>авторизованные пользователи</TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD>UNAUTHORIZED_USERS</TD>
+    <TD>неавторизованные пользователи</TD>
+    <TD>
+    <TD></TD></TR></TBODY></TABLE><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>Service Roles</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Auth. Mechanism</TD>
+    <TD class=subHeader># of Identities</TD></TR>
+  <TR>
+    <TD vAlign=top>Service Role 1</TD>
+    <TD vAlign=top>Служебные роли - это набор некоторых уровней привилегий, 
+      ассоциированных с компонентами приложения. Служат, в первую очередь, для 
+      обобщенного описания нескольких компонентов. Примерами служебных ролей 
+      есть, скажем, веб-сервер или база данных. Служебная роль состоит из 
+      следующих полей: - название, - описание, - механизм аутентификации - 
+      образцовое число сущностей. Все поля, кроме названия, является 
+      опциональными. Поля «механизм аутентификации» и «приблизительное число 
+      сущностей» выбираются из ниспадающих списков, содержание которых также 
+      подвергается корректировке в настройках программы.</TD>
+    <TD vAlign=top>Forms</TD>
+    <TD vAlign=top>6-10</TD></TR></TBODY></TABLE><BR><A name=components>
+<DIV class=mainSection>Components</DIV><BR>
+<DIV class=mainSectionText>Components define the high level building blocks of 
+the system. Components are decomposed logically into services and objects 
+through which the user interacts with the system. Both components and objects 
+can talk to each other in order to fulfill a user action. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=5>Components</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Roles</TD>
+    <TD class=subHeader>Type</TD>
+    <TD class=subHeader>Tech. Type</TD>
+    <TD class=subHeader>Run As</TD></TR>
+  <TR>
+    <TD vAlign=top>Component 1 - Profile info</TD>
+    <TD vAlign=top>ADMIN<BR>AUTHORIZED_USERS </TD>
+    <TD vAlign=top>Website</TD>
+    <TD vAlign=top>Other</TD>
+    <TD vAlign=top></TD></TR>
+  <TR>
+    <TD vAlign=top>Component 2 - Blog post</TD>
+    <TD vAlign=top>ADMIN<BR>AUTHORIZED_USERS<BR>UNAUTHORIZED_USERS </TD>
+    <TD vAlign=top>Website</TD>
+    <TD vAlign=top>Other</TD>
+    <TD vAlign=top></TD></TR></TBODY></TABLE><BR><BR><A name=external_dependencies>
+<DIV class=mainSection>External Dependencies</DIV><BR>
+<DIV class=mainSectionText>External dependency is a type of component which is 
+external to the application and application does not have control over the 
+behavior or the implementation of the dependency. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>External Dependencies</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Dependency Type</TD></TR>
+  <TR>
+    <TD vAlign=top>External Dependency</TD>
+    <TD vAlign=top>https://ru.wordpress.com/create-blog/ Внешние зависимости - 
+      это некоторые компоненты, с которыми приложение будет взаимодействовать, 
+      но на которые оно не может непосредственно влиять. Например, это может 
+      быть паспорт. NET, цифровые сертификаты сайтов и т.п. Внешняя зависимость 
+      состоит всего из 3 полей: - название, - описание - тип (выбираемый из 
+      списка).</TD>
+    <TD vAlign=top>Website</TD></TR></TBODY></TABLE><BR><BR><A name=data>
+<DIV class=mainSection>Data</DIV><BR>
+<DIV class=mainSectionText>Data can be logically broken down into data elements 
+grouped based on the classification. Data is actively stored in one or more 
+components which can be accessed by the user. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=5>Data</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Data Elements</TD>
+    <TD class=subHeader>Data Classification</TD>
+    <TD class=subHeader>Data Stores</TD></TR>
+  <TR>
+    <TD vAlign=top>Profile Info</TD>
+    <TD vAlign=top>В пункте «Данные» определяются типы информации, 
+      обрабатываемой данным приложением или является частью его внутренних 
+      процессов. Отдельные типы данных могут быть разбиты на конкретные элементы 
+      - для их более наглядного представления. Так, пользовательская учетная 
+      запись банковской системы представляют собой отдельную сущность, но может 
+      быть разбита на поля логин, пароль, ФИО и так далее. Каждый элемент 
+      относится к типу Данные (Data), состоит из следующих полей: название, 
+      описание, список подполей, класс данных (неважно, важно, очень важно и 
+      т.д.), матрица контроля доступа. Последняя составляется на основании 
+      введенных ранее пользовательских ролей и определяет права доступа каждой 
+      роли к элементу данных. Для определения прав доступа используются четыре 
+      отдельных права (на создание, чтение, модификацию и удаление информации), 
+      которые могут быть разрешены или запрещены для каждой роли в отдельности. 
+      Кроме того, возможно задание условных прав - таких, которые действуют 
+      только при выполнении определенного условия. Например, пользователь имеет 
+      право читать или модифицировать данные учетной записи, но только при 
+      условии, что он является владельцем этой записи. Администратор же имеет 
+      полные права для операций над учетными записями - без всяких условий.</TD>
+    <TD vAlign=top>Login Password First Name Last Name</TD>
+    <TD vAlign=top>High Business Impact</TD>
+    <TD vAlign=top>Component 1 - Profile info<BR></TD></TR>
+  <TR>
+    <TD colSpan=5><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=9>Access Control</TD></TR>
+        <TR>
+          <TD class=subHeader>Role</TD>
+          <TD class=subHeader colSpan=4 align=center>Access Control</TD>
+          <TD class=subHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>ADMIN</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD vAlign=top></TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center><B>U</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top><FONT size=1 face=Tahoma>User is the owner of 
+            Data</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>UNAUTHORIZED_USERS</FONT> 
+</TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top></TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD vAlign=top>Blog Post</TD>
+    <TD vAlign=top>
+    <TD vAlign=top>Сообщения</TD>
+    <TD vAlign=top>Medium Business Impact</TD>
+    <TD vAlign=top>Component 2 - Blog post<BR></TD></TR>
+  <TR>
+    <TD colSpan=5><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=9>Access Control</TD></TR>
+        <TR>
+          <TD class=subHeader>Role</TD>
+          <TD class=subHeader colSpan=4 align=center>Access Control</TD>
+          <TD class=subHeader>Condition</TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>ADMIN</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center><B>U</B></TD>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD vAlign=top><FONT size=1 face=Tahoma>все сообщения</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>U</B></TD>
+          <TD vAlign=top width=20 align=center><B>D</B></TD>
+          <TD vAlign=top><FONT size=1 face=Tahoma>только свои сообщения / User 
+            is the owner of Data</FONT> </TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT> </TD>
+          <TD vAlign=top width=20 align=center><B>C</B></TD>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top></TD></TR>
+        <TR>
+          <TD vAlign=top><FONT size=1 face=Tahoma>UNAUTHORIZED_USERS</FONT> 
+</TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center><B>R</B></TD>
+          <TD vAlign=top width=20 align=center>
+          <TD vAlign=top width=20 align=center>
+          <TD 
+vAlign=top></TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=application_use_cases>
+<DIV class=mainSection>Application Use Cases</DIV><BR>
+<DIV class=mainSectionText>Use cases are fulfilled by a sequence of calls. Each 
+use case is targeted towards a specific business objective. Each call captures 
+the user's action on a component. Each use case achieves a net data effect on a 
+data. </DIV><BR><BR>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader colSpan=4>Application Use Cases</TD></TR>
+  <TR>
+    <TD class=subHeader>Name</TD>
+    <TD class=subHeader>Description</TD>
+    <TD class=subHeader>Roles</TD>
+    <TD class=subHeader>Net Data Effect</TD></TR>
+  <TR>
+    <TD>ADMIN create read delete Profile info</TD>
+    <TD>ADMIN создает, просматривает, удаляет Профиль Прецеденты (Use Case) - 
+      это описание конкретных сценариев, создаваемых для реализации заданных в 
+      предыдущем пункте разрешений. Так, копирование, обновление данных 
+      пользовательской учетной записи или создания новой учетной записи являются 
+      хорошими примерами прецедентов. Каждый прецедент состоит из следующих 
+      полей: - название, -&nbsp;описание (опционально), -&nbsp;бизнес-задачи, 
+      которые реализуются в рамках прецедента, - роли, которые участвуют в 
+      прецеденте, - данные, взаимодействие с которыми описывает прецедент и - 
+      итог операции. Итог представляется в виде комбинации операций создания, 
+      чтения, модификации и удаления данных. Фактически, прецедент описывает 
+      какое-то событие, которое может произойти при работе программы.</TD>
+    <TD>ADMIN</TD>
+    <TD><B>C</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>create</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 1 - Profile 
+info</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>read</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 1 - Profile 
+info</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>delete</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 1 - Profile info</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat_Model_of_BLOG-Comprehensive_Report_files/3b30dcb5-bd8f-480f-8f22-5fbaa95c56ab.jpg"></TD></TR>
+  <TR>
+    <TD>ADMIN create read update delete Blog post</TD>
+    <TD>ADMIN создает, читает, изменяет, удаляет ВСЕ сообщения</TD>
+    <TD>ADMIN</TD>
+    <TD><B>C</B> <B>R</B> <B>U</B> <B>D</B> Blog Post</TD></TR>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>create</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>read</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>update</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>ADMIN</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>delete</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat_Model_of_BLOG-Comprehensive_Report_files/82ce606f-4ce6-4bfb-aaa1-1ad1b4e42620.jpg"></TD></TR>
+  <TR>
+    <TD>AUTHORIZED read update Profile info</TD>
+    <TD>Авторизованный пользователь просматривает и редактирует Профиль</TD>
+    <TD>ADMIN</TD>
+    <TD><B>R</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>read</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 1 - Profile 
+info</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>update</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 1 - Profile info</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat_Model_of_BLOG-Comprehensive_Report_files/40c89be3-8e86-416e-ad95-e07080f17fdf.jpg"></TD></TR>
+  <TR>
+    <TD>AUTHORIZED create read update delete Blog post</TD>
+    <TD>Авторизованный пользователь создает, просматривает, редактирует и 
+      удаляет СВОЁ сообщение</TD>
+    <TD>ADMIN</TD>
+    <TD><B>U</B> Profile Info</TD></TR>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>create</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>read</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>update</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT><BR></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> </TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>AUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>delete</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat_Model_of_BLOG-Comprehensive_Report_files/d4141627-2e74-49c8-9b85-1ba49dc87936.jpg"></TD></TR>
+  <TR>
+    <TD>UNAUTHORIZED read Blog post</TD>
+    <TD>Неавторизованный просматривает сообщение</TD>
+    <TD>
+    <TD></TD>
+  <TR>
+    <TD colSpan=4><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader colSpan=4>Calls</TD></TR>
+        <TR>
+          <TD class=subHeader>Caller</TD>
+          <TD class=subHeader>Action</TD>
+          <TD class=subHeader>Component</TD>
+          <TD class=subHeader>Authorization</TD></TR>
+        <TR>
+          <TD><FONT size=1 face=Tahoma>UNAUTHORIZED_USERS</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>read</FONT> </TD>
+          <TD><FONT size=1 face=Tahoma>Component 2 - Blog post</FONT></TD>
+          <TD><FONT size=1 face=Tahoma>Delegate Caller</FONT> 
+      </TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD colSpan=4 align=center><IMG 
+      src="Threat_Model_of_BLOG-Comprehensive_Report_files/4412b66d-268d-49e2-8149-e41969141ba6.jpg"></TD></TR></TBODY></TABLE><BR><BR>
+<DIV class=mainSection>Threats</DIV><BR>
+<DIV class=mainSectionText>A threat is defined as an undesired event, a 
+potential occurrence, often best described as an effect that might damage or 
+compromise an asset or objective. It may or may not be malicious in nature. 
+</DIV><BR><BR><A name=confidentiality_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Confidentiality Threats</TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;create&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;update&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;delete&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Unauthorized disclosure of &lt;read&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=integrity_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Integrity Threats</TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 1 - Profile 
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 1 - Profile 
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 1 - Profile 
+      info&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;ADMIN&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 1 - Profile 
+      info&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 1 - Profile 
+      info&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;create&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;update&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;delete&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Illegal execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B> <BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><BR><BR><A 
+name=availability_threats>
+<TABLE cellSpacing=1 cellPadding=0 width=790>
+  <TBODY>
+  <TR>
+    <TD class=itemHeader>Availability Threats</TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;ADMIN&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 1 - 
+      Profile info&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;create&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;update&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;delete&gt; using &lt;Component 2 - 
+      Blog post&gt; by &lt;AUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic SQL</TD></TR></TBODY></TABLE><BR></TD></TR>
+  <TR>
+    <TD><B>Ineffective execution of &lt;read&gt; using &lt;Component 2 - Blog 
+      post&gt; by &lt;UNAUTHORIZED_USERS&gt;</B><BR><BR>
+      <TABLE cellSpacing=1 cellPadding=0 width="80%" align=center>
+        <TBODY>
+        <TR>
+          <TD class=itemHeader>Countermeasures</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Cross-Site Scripting (XSS) : Perform 
+            context sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Forceful Browsing : Every object needs to 
+            have an authorization control</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>HTTP Replay Attack : Provide a secure 
+            end-to-end communication channel between server and client (e.g., 
+            SSL)</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>One-Click Attack : Make the request that 
+            encapsulates the users action unique for each authenticated 
+        user</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Password Brute Force : Implement a lockout 
+            policy</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Repudiation Attack : Implement proper and 
+            effective logging</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Response Splitting : Perform 
+            context-sensitive encoding</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>Session Hijacking : Use strong random 
+            numbers for session IDs</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use parameterized SQL 
+            statement</TD></TR>
+        <TR>
+          <TD><INPUT type=checkbox>SQL Injection : Use stored procedure with 
+            no dynamic 
+SQL</TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE></A></BODY></HTML>
